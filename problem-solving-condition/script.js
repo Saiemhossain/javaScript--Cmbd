@@ -37,7 +37,7 @@ if (number1 % 10 === 0) {
   console.log('the number is not divisible');
 }
 
-console.log('the divisibel number:', number1);
+
 
 
 //04. Solve the problem with Javascript  to check whether a number is even or odd.
