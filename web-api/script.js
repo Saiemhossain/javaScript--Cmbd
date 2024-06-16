@@ -137,5 +137,75 @@ function displayAdvice(data) {
 generateBtn.addEventListener('click', ()=> fetchApi(ADVICE_API));
 
 
+// Flag Api showing
+
+const FLAG_API = 'https://restcountries.com/v3.1/all?fields=name,flags';
+ 
+function fetchApi(url) {
+  fetch(url)
+    .then(res => res.json())
+    .then(data => display(data));
+}
+fetchApi(FLAG_API);
+
+function display(flags) {
+  let totalFlag = flags.slice(0, 30);
+  totalFlag.forEach(flag => {
+    postDiv.innerHTML += `
+   
+   <div class="box">
+  <img src= ${flag.flags.png} alt="">
+  <h4> ${flag.name.common} </h4>
+  <h2> ${flag.name.official} </h2>
+ </div>
+   
+   
+    `;
+ })
+}
+
+// Quiet Api showing
+
+const QUIET_API = 'https://api.kanye.rest';
+
+function fetchApi(url) {
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displayQuote(data));
+}
+
+fetchApi(QUIET_API);
+
+function displayQuote(quotes) {
+  heading.innerHTML = quotes.quote;
+}
+generateBtn.addEventListener('click', () => fetchApi(QUIET_API));
+
+
+// Food Api showing
+
+const FOOD_API = 'https://www.themealdb.com/api/json/v1/1/random.php';
+
+function fetchApi(url) {
+  fetch(url)
+    .then(res => res.json())
+    .then(data => displayFoods(data));
+}
+fetchApi(FOOD_API);
+
+function displayFoods(foods) {
+  let itemFoods = foods.meals[0];
+  postDiv.innerHTML = `
+   <div class="box">
+  <img src="" alt="">
+  <h4>  ${itemFoods.idMeal} </h4>
+  <h2> ${itemFoods.strMeal}  </h2>
+ </div>
+  
+  
+  `;
+}
+
+
 
 
