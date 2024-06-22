@@ -184,24 +184,26 @@ generateBtn.addEventListener('click', () => fetchApi(QUIET_API));
 
 // Food Api showing
 
+
 const FOOD_API = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
 function fetchApi(url) {
   fetch(url)
     .then(res => res.json())
-    .then(data => displayFoods(data));
+    .then(data => dispay(data.meals[0]));
 }
+
 fetchApi(FOOD_API);
 
-function displayFoods(foods) {
-  let itemFoods = foods.meals[0];
+function dispay(foods) {
   postDiv.innerHTML = `
-   <div class="box">
-  <img src="" alt="">
-  <h4>  ${itemFoods.idMeal} </h4>
-  <h2> ${itemFoods.strMeal}  </h2>
- </div>
   
+   <div class="box">
+  <img src= ${foods.strMealThumb} alt="">
+  <h4> ${foods.idMeal}  </h4>
+  <h2> ${foods.strMeal} </h2>
+  <h2> ${foods.strCategory} </h2>
+ </div>
   
   `;
 }
