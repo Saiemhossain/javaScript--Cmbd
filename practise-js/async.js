@@ -50,5 +50,25 @@ function display(products) {
 fetchApi(); 
 
 
+let fruits = ['apple', 'banana', 'lichi', 'mango', 'pineapple','orange'];
+
+//appling forEach Method
+fruits.forEach(fruit => {
+  console.log(fruit);
+});
+
+
+//appling filter Method
+let filterFruits = fruits.filter(function (fruit) {
+  return fruit.length < 8;
+});
+
+// console.log(filterFruits);
+
+//appling forloop Method
+for (let fruit = 0; fruit < fruits.length; fruit++){
+  console.log(fruits[fruit]);
+}
+
 
 
