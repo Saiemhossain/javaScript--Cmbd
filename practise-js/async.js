@@ -70,5 +70,13 @@ for (let fruit = 0; fruit < fruits.length; fruit++){
   console.log(fruits[fruit]);
 }
 
+//appling function on forloop 
+function loopAnimal(animals) {
+  for (let animal = 0; animal < animals.length; animal++){
+    console.log(animals[animal])
+  }
+}
+
+loopAnimal(animals = ['cat', 'dog', 'elephant', 'bear', 'fox']);
 
 
