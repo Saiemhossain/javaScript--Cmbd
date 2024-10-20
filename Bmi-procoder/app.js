@@ -8,11 +8,10 @@ const scoreElement = document.querySelector('#score');
 
 
 function getBMI() {
-  const BmiIndex = (weightElement.value) / (heightElement.value * heightElement.value)
+  const BmiIndex = parseFloat((weightElement.value)) / parseFloat((heightElement.value * heightElement.value))
  
   scoreElement.textContent = BmiIndex.toFixed(2);
 }
 
-button.addEventListener('click', getBMI)
-
+button.addEventListener('click', getBMI);
 
