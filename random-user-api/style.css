@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+.image-container-item{
+  width: 96%;
+  padding: 20px;
+  margin: 15px auto 0;
+  background: #ddd;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 10px;
+}
+.image-container-item img{
+  border-radius: 5px;
+  margin-bottom: 5px;
+ 
+}
+
+.image-container-item p{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
