@@ -47,7 +47,7 @@ console.log(getLength('Bangladesh is a  beautiful country'));
 //05 একটি স্ট্রিংকে উল্টো করে প্রিন্ট করুন।
 
 function strReversed(str) {
-  return str.split('').reverse('').join('');
+  return str.split('').reverse().join('');
 }
 
 console.log(strReversed('Bangladesh is a  beautiful country'));
