@@ -17,7 +17,7 @@ console.log(findMax([4, 3, 5, 7, 2, 1]));
 //03 Checkout Palindrome
 
 function isPalindrome(str) {
-  const reversed = str.split('').reverse('').join('');
+  const reversed = str.split('').reverse().join('');
 
   return str === reversed;
 }
@@ -54,8 +54,8 @@ console.log(strReversed('Bangladesh is a  beautiful country'));
 
 //6 অ্যারেতে একটি নির্দিষ্ট মান আছে কি না, তা চেক করুন।
 
-function checkValueInArray(str, value) {
-  return str.includes(value);
+function checkValueInArray(arr, value) {
+  return arr.includes(value);
 }
 
 console.log(checkValueInArray([1, 2, 3, 4, 5, 6, 7], 7));
