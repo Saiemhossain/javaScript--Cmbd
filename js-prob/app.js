@@ -135,9 +135,7 @@ function getTotal(arr) {
 
 // console.log(getTotal(numbers));
 
-/*
- * Mid level
- */
+
 
 //একটি স্ট্রিংয়ের প্রতিটি শব্দের প্রথম অক্ষর বড় হাতের অক্ষরে করুন।
 
@@ -291,4 +289,28 @@ function secondLarge(arr) {
 }
 
 console.log(secondLarge([1,2,3,4,5]));
+
+//Find the intersection of two arrays.
+
+function interSection(arr1, arr2) {
+  return arr1.filter((item) => arr2.includes(item) )
+}
+
+console.log(interSection([1, 2, 3, 4], [3, 4, 5, 6]));
+
+//Find first letter from string
+function findFirstLetter(str) {
+  let letter = str.split('').join('')
+  return First = letter.charAt(0)
+
+}
+
+console.log(findFirstLetter('Radar'));
+
+//Check if a string starts and ends with the same character.
+function startsAndEndsSame(str) {
+  return str.charAt(0).toLowerCase() === str.charAt(str.length - 1).toLowerCase();
+}
+
+console.log(startsAndEndsSame('radar'));
 
