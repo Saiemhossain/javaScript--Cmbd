@@ -242,15 +242,53 @@ console.log(
   countPalindrome(['madam', 'hello', 'level', 'world', 'radar', 'java'])
 );
 
+//remove falsy value from an array
 
+function falsyValue(arr) {
+  return arr.filter(Boolean)
+}
 
+console.log(falsyValue([1, 2, 'hello world', null, undefined]));
 
+//Calculate the sum of digits in a number.
 
+function sumOfDigit(num) {
+  return num.toString().split('').map(Number).reduce((pre,curr) => pre +curr ,0)
+}
 
+console.log(sumOfDigit(1234));
 
+//Convert a string to title case.
 
+function titleCase(str) {
+  return str.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() ).join('')
+}
 
+console.log(titleCase('Hello World, this is a test'));
 
+//Check if two strings are anagrams.
 
+function anagrams(str1, str2) {
+  return str1.split('').sort().join('') === str2.split('').sort().join('');
+}
 
+console.log(anagrams('listen', 'silent'));
+console.log(anagrams('teacher','student'));
+
+//Flatten a nested array.
+
+function flattenArr(arr) {
+  return arr.flat(Infinity)
+}
+
+console.log(flattenArr([1, [2, [3, 4, [5, 6]]]]));
+
+//Find the second largest word in an array
+
+function secondLarge(arr) {
+   arr.sort((a, b) => b - a);
+  return arr[1];
+}
+
+console.log(secondLarge([1,2,3,4,5]));
 
