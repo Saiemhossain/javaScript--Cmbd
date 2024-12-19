@@ -259,7 +259,7 @@ console.log(sumOfDigit(1234));
 //Convert a string to title case.
 
 function titleCase(str) {
-  return str.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() ).join('')
+  return str.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() ).join(' ')
 }
 
 console.log(titleCase('Hello World, this is a test'));
