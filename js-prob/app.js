@@ -322,3 +322,13 @@ function countVowels(str) {
 
 console.log(countVowels("bangladesh"));
 
+//Filter out numbers greater than a target value from an array
+
+function filterNum(arr, target) {
+ return arr.filter((num) => num <= target )
+}
+
+const numbers = [15, 20, 25, 30, 35];
+const target = 25;
+
+console.log(filterNum(numbers,target));
