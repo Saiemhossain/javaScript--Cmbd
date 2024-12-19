@@ -314,3 +314,11 @@ function startsAndEndsSame(str) {
 
 console.log(startsAndEndsSame('radar'));
 
+//Count vowels in a string.
+
+function countVowels(str) {
+  return str.split("").filter((item) => 'aeiouAEIOU'.includes(item) ).length
+}
+
+console.log(countVowels("bangladesh"));
+
