@@ -332,3 +332,45 @@ const numbers = [15, 20, 25, 30, 35];
 const target = 25;
 
 console.log(filterNum(numbers,target));
+
+
+// Find the largest word in a string.
+
+function largestWord(str) {
+  return str.split(' ').sort((a,b)=> b.length - a.length)[0]
+}
+
+console.log(largestWord('bangladesh is a beautiful country'));
+
+//Merge two arrays without duplicates
+
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3,4,5,6]
+
+function mergeArr(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])];
+
+}
+
+console.log(mergeArr(arr1, arr2));
+
+// Find the largest word in a string.
+
+function findSecondLarge(str){
+  return str.split(' ').sort((a,b)=> b.length - a.length)[1]
+}
+
+console.log(findSecondLarge('bangladesh is a beautiful country'));
+
+// Count occurrences of a character in a string.
+
+function occurrences(str, char) {
+  return str.split(char).length - 1
+}
+console.log(occurrences('hello world', 'o'));
+
+function CountWord(str, word) {
+  return str.split(' ').filter((w)=> w === word).length
+}
+
+console.log(CountWord('hello word hello', 'hello'));
