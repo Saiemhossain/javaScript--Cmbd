@@ -136,7 +136,6 @@ function getTotal(arr) {
 // console.log(getTotal(numbers));
 
 
-
 //একটি স্ট্রিংয়ের প্রতিটি শব্দের প্রথম অক্ষর বড় হাতের অক্ষরে করুন।
 
 function capitalizeWords(str) {
@@ -374,3 +373,11 @@ function CountWord(str, word) {
 }
 
 console.log(CountWord('hello word hello', 'hello'));
+
+// Generate a random number between 1 and 10.
+
+function randomNum(num) {
+  return Math.floor(Math.random(num) * 10) + 1;
+}
+
+console.log(randomNum());
