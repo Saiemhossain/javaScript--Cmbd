@@ -409,3 +409,7 @@ var javascript = {
 }
 
 javascript.myLib();
+
+//  truthy or falsy value কোনটা ?
+
+// null , undefined, blank, false, 0, Nan এইগুলো  falsy value
