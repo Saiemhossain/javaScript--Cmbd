@@ -397,3 +397,15 @@ function isPrime(num) {
 }
 
 console.log(isPrime(7));
+
+//fat arrow function
+
+var javascript = {
+  name: 'javaScript',
+  lib: ['Angular', 'React', 'Vue'],
+  myLib: function () {
+    this.lib.forEach((a)=> console.log(`${this.name} has ${a}`))
+  }
+}
+
+javascript.myLib();
