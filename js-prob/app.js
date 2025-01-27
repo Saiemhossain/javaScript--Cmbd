@@ -413,3 +413,57 @@ javascript.myLib();
 //  truthy or falsy value কোনটা ?
 
 // null , undefined, blank, false, 0, Nan এইগুলো  falsy value
+
+ 
+//closure :Closure হলো একটি ফাংশন যা নিজের scope-এ থাকা ভ্যারিয়েবল বা parent function-এর ভ্যারিয়েবলগুলোর অ্যাক্সেস ধরে রাখে, এমনকি parent function execution শেষ হওয়ার পরেও।
+
+function outerFunction() {
+  let outerVariable = 'I am a outer variable';
+
+  function innerFunction() {
+    console.log('I am inner variable');
+  }
+  return innerFunction;
+}
+const closureExample = outerFunction()
+
+
+console.log(closureExample());
+
+function counter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    return count
+  }
+}
+
+const anotherClosure = counter();
+
+console.log(anotherClosure());
+console.log(anotherClosure());
+
+
+//Javascript inheritance : JavaScript-এ prototype inheritance হলো একটি প্রক্রিয়া যার মাধ্যমে একটি অবজেক্ট আরেকটি অবজেক্টের প্রোপার্টি এবং মেথড অ্যাক্সেস করতে পারে।
+
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype.sayHello = function () {
+  console.log(`my name is ${this.name} and my age is ${this.age}`);
+}
+
+function Student(name, age, grade) {
+  Person.call(this, name, age)
+  this.grade = grade;
+}
+
+Student.prototype = Object.create(Person.prototype);
+
+const Student1 = new Student('saim', 25, '12th grade')
+
+console.log(Student1);
