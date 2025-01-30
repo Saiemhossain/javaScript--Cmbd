@@ -588,4 +588,28 @@ const processingOrder = (customer) => {
 takeOrder('saim'); 
 processingOrder('saim'); 
 
+const hasMeeting = false;
 
+// Js Promise
+
+const meeting = new Promise((resolve, reject) => {
+  if (hasMeeting) {
+    resolve([
+      {
+        name: 'Google Technical Meeting',
+        location: 'Google Meet',
+        time: '10pm'
+      }
+    ])
+  } else {
+    reject('meeting already scheduled!')
+  }
+});
+
+meeting.then((res) => {
+  console.log(res);
+})
+
+.catch((err) => {
+  console.log(err);
+})
