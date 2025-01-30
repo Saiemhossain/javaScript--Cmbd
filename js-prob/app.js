@@ -467,3 +467,125 @@ Student.prototype = Object.create(Person.prototype);
 const Student1 = new Student('saim', 25, '12th grade')
 
 console.log(Student1);
+
+//example without higher order function
+
+let numbers = [1, 2, 3];
+var result = [];
+
+
+for (let i = 0; i < numbers.length; i++){
+  result.push(numbers[i] * 2);
+}
+
+console.log(result);
+
+//example-1 with higher order function
+
+
+let numOfNumber = [1, 2, 3];
+
+let ans = numOfNumber.map((number) => {
+  return number * 2;
+})
+
+// console.log(ans);
+
+//example-2 with higher order function
+
+var players = [
+  {
+    name: 'Shakib',
+    avg: 38.23,
+  },
+  {
+    name: 'Tamim',
+    avg: 40.23,
+  },
+  {
+    name: 'Mushfiq',
+    avg: 41.23,
+  },
+];
+
+
+//example-2 without higher order function
+
+var updatedPlayers = [];
+
+
+for (let i = 0; i < players.length; i++){
+  if (players[i].avg > 39) {
+    updatedPlayers.push(players[i])
+  }
+}
+
+console.log(updatedPlayers);
+
+//example with higher order function
+
+
+var updatedPlayers = players.filter((player) => {
+  return player.avg > 38.0;
+})
+
+console.log(updatedPlayers);
+
+
+
+
+//call method
+
+
+var printName = function () {
+    console.log(this.name);
+  }
+
+var person = {
+  name: 'Saiem',
+  age: 28,
+
+}
+
+// printName.call(person)
+
+//apply method
+
+var printName = function (city, country) {
+  console.log(`${this.name} lives at ${city} in ${country}`);
+}
+
+person = {
+  name: 'Shakib',
+  age : 35,
+}
+
+printName.apply(person, ['New York', 'Usa']);
+
+//example-3 arry.map 
+
+const language = ['javascript', 'python', 'php', 'c'];
+
+const newLan = language.map((lan) => {
+  return lan.length ;
+})
+
+console.log(newLan);
+
+
+const takeOrder = (customer) => {
+  console.log(`taking order for ${customer}`);
+}
+
+const processingOrder = (customer) => {
+  console.log('cooking completed');
+
+  setTimeout(() => {
+    console.log(`processing order for ${customer}`);
+  }, 3000);
+}
+
+takeOrder('saim'); 
+processingOrder('saim'); 
+
+
