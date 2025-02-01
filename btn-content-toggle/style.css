@@ -1,0 +1,25 @@
+.btn-content{
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-area{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-area button{
+  padding: 8px 12px;
+  font-size: 15px;
+}
+
+.tab-content{
+  display: none;
+}
+.active{
+  display: block;
+}
