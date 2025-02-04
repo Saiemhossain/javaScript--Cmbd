@@ -343,3 +343,104 @@ console.log(numOfMarriedCustomer);
 let avgAgeOfMarriedCustomer = marriedCustomersCost / numOfMarriedCustomer.length;
 
 console.log(avgAgeOfMarriedCustomer);
+
+// create an array of 5 elements using the rray contructor
+
+const arrayLiteral = new Array(1, 2, 3, 4, 5);
+
+console.log(arrayLiteral);
+
+
+// create an array of 3 empty slots
+
+const emptySlot = new Array(3);
+
+console.log(emptySlot);
+
+
+// create an array of 6 elements using the array literals and access  the fourth element in the array using its length property
+
+const myArray = [10, 20, 30, 40, 50, 60];
+
+const fourthElem = myArray[3];
+
+console.log(fourthElem);
+
+// How to get elements from an array in js
+
+let arr = [10, 20, 30, 40];
+console.log(arr[0]);
+console.log(arr[2]); 
+
+//how to remove element from an array?
+
+arr.pop()
+console.log(arr);
+
+//how to add element from an array?
+
+arr.push(66)
+console.log(arr);
+
+
+//how to copy and clone element from an array?
+let originalArr = ['apple', 'mango', 'pineapple'];
+
+let copiedArr = [...originalArr];
+
+console.log(copiedArr);
+
+//How to determine if a value is in array in js?
+
+let fruits = ['apple', 'mango', 'pineapple'];
+
+let ifHaveFruit = fruits.includes('apple');
+
+console.log(ifHaveFruit);
+
+//or you can use
+
+ ifHaveFruit = fruits.some((fruit) => fruit === 'apple');
+
+console.log(ifHaveFruit);
+
+//array desturcturing in js
+
+let fruits1 = ['apple', 'mango', 'banana'];
+
+let [first, second, third] = fruits1;
+
+console.log(first);
+console.log(second);
+console.log(third);
+
+//how to assign default value in array
+
+let values = [undefined, 20];
+
+let [a = 5, b = 10, c = 15] = values;
+
+console.log(a);  
+console.log(b); 
+console.log(c); 
+
+
+//how to skip a value from an array
+
+let numbers = [10, 20, 30];
+
+let [first, ,third ] = numbers;
+
+console.log(first);  
+
+//how to assign Default Value in Nested Array
+
+let nestedArray = [10, [undefined, 30]];
+
+let [x = 5, [y = 15, z = 25]] = nestedArray;
+
+console.log(x);
+console.log(y); 
+console.log(z); 
+
+
