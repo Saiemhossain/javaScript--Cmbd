@@ -275,7 +275,7 @@ console.log(fullName);
 
 //Build customer data with a title
 
-let title = customers.map((customers) => {
+let title = customers.map((customer) => {
   let title = '';
   if (customer.gender === "M") {
     title = 'Mr'
