@@ -328,3 +328,18 @@ let dataOfYoungCustomers = customers.filter((customer) => customer.age < 12)
 
   console.log(dataOfYoungCustomers);
 
+//Find out the avg cost of married customers
+
+let marriedCustomersCost = customers.filter((customer) => customer.married)
+  .map((customer) => customer.expense)
+  .reduce((acc, total) => acc + total, 0);
+
+console.log(marriedCustomersCost);
+
+let numOfMarriedCustomer = customers.filter((customer) => customer.married);
+
+console.log(numOfMarriedCustomer);
+
+let avgAgeOfMarriedCustomer = marriedCustomersCost / numOfMarriedCustomer.length;
+
+console.log(avgAgeOfMarriedCustomer);
