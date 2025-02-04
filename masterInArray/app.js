@@ -443,4 +443,50 @@ console.log(x);
 console.log(y); 
 console.log(z); 
 
+//Spread (...spread): একটি অ্যারে বা অবজেক্টকে আলাদা মানে বিভক্ত করে।
 
+let fruits = ['apple', 'mango', 'banana'];
+
+let spreadFruits = [...fruits];
+
+console.log(spreadFruits);
+
+
+
+//Rest (...rest): বাকি সব মান সংগ্রহ করে একটি অ্যারেতে রাখে।
+
+
+let numbers = [10, 20, 30, 40, 50];
+
+
+let [first, second, ...rest] = numbers;
+
+console.log(first);  
+console.log(second); 
+console.log(rest);  
+
+
+// how to  create and update an access in array in js
+
+//👉 1️⃣ Creating an Array
+
+
+let fruits1 = ['apple', 'mango', 'banana'];
+
+console.log(fruits1);
+
+//👉 2️⃣ Accessing Elements in an Array
+
+let someFruits = ['apple', 'mango', 'banana'];
+
+console.log(someFruits[0]);
+console.log(someFruits[1]);
+console.log(someFruits[2]);
+
+//👉 3️⃣ Updating an Element in an Array
+
+let person = ['anamika', 'aric', 'athina'];
+
+person[3] = 'abir';
+
+console.log(person);
