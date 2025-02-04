@@ -277,15 +277,15 @@ console.log(fullName);
 
 let title = customers.map((customers) => {
   let title = '';
-  if (customers.gender === "M") {
+  if (customer.gender === "M") {
     title = 'Mr'
-  } else if (customers.gender === 'F' && customers.married) {
+  } else if (customer.gender === 'F' && customer.married) {
     title = "Mrs"
   } else {
     title = "Miss"
   }
 
-  return title + ' ' + customers.f_name + ' ' + customers.l_name;
+  return title + ' ' + customer.f_name + ' ' + customer.l_name;
 })
 
 console.log(title);
@@ -320,4 +320,11 @@ if (hasYoungCustomers) {
 }
 
 console.log();
+
+//print young customer data .Young customer age should be under 18 years
+
+let dataOfYoungCustomers = customers.filter((customer) => customer.age < 12)
+  .map((customer) => customer.f_name + ' ' + customer.l_name);
+
+  console.log(dataOfYoungCustomers);
 
