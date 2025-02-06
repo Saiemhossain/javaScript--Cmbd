@@ -683,3 +683,34 @@ fetchData('https://jsonplaceholder.typicode.com/todos/1')
   .then((data) => console.log(data))
 .catch((err)=> console.log(err))
 
+//Post XMLHttpReq
+
+function postData(url, data){
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true)
+    xhr.setRequestHeader('Content-Type', 'application/json')
+
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        resolve(JSON.parse(xhr.responseText))
+      } else {
+        reject(new Error('something went worng with the status', xhr.status))
+      }
+    }
+    xhr.onerror = function () {
+      reject(new Error('something went wrong'))
+    }
+
+    xhr.send(JSON.stringify(data))
+  })
+}
+
+postData('https://jsonplaceholder.typicode.com/posts', {
+  title: 'New Post',
+  body: 'This is a new post',
+  userId : 1,
+})
+  .then((data) => console.log(data))
+.catch((error) => console.log(error))
+
