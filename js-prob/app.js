@@ -652,3 +652,30 @@ let person = {
 person.age = 32;
 
 console.log(person);
+
+
+
+//Get  XMLHttpRequest
+
+function fetchData(url) {
+  return new Promise((resolve, reject) =>{
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', url, true)
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        resolve(JSON.parse(xhr.responseText))
+      } else {
+        reject(new Error('something went worng widh the status'))
+      }
+    }
+
+    xhr.onerror = function () {
+      reject(new Error('network error'))
+    }
+    xhr.send();
+  })
+}
+
+fetchData('https://jsonplaceholder.typicode.com/todos/1')
+  .then((data) => console.log(data))
+.catch((error) => console.log(error))
