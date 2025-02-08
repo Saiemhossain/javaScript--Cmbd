@@ -417,32 +417,45 @@ javascript.myLib();
  
 //closure :Closure হলো একটি ফাংশন যা নিজের scope-এ থাকা ভ্যারিয়েবল বা parent function-এর ভ্যারিয়েবলগুলোর অ্যাক্সেস ধরে রাখে, এমনকি parent function execution শেষ হওয়ার পরেও।
 
-function outerFunction() {
-  let outerVariable = 'I am a outer variable';
-
-  function innerFunction() {
-    console.log('I am inner variable');
+function father() {
+  var name = 'Anamika';
+  function daughter() {
+   
+    console.log(name);
   }
-  return innerFunction;
+  return daughter
 }
-const closureExample = outerFunction()
+
+const myDaughter = father()
+
+myDaughter()
 
 
-console.log(closureExample());
+function outer() {
+  var variable = 'i am outer variable';
+   function inner() {
+    console.log(variable);
+  };
 
-function counter() {
-  let count = 0;
+ return inner;
+}
+
+const mainOuter = outer();
+
+mainOuter()
+
+function greet() {
+  var message = 'Hello Saim!'
 
   return function () {
-    count++;
-    return count
+    console.log(message);
   }
 }
 
-const anotherClosure = counter();
+const myGreet = greet();
 
-console.log(anotherClosure());
-console.log(anotherClosure());
+myGreet()
+
 
 
 //Javascript inheritance : JavaScript-এ prototype inheritance হলো একটি প্রক্রিয়া যার মাধ্যমে একটি অবজেক্ট আরেকটি অবজেক্টের প্রোপার্টি এবং মেথড অ্যাক্সেস করতে পারে।
