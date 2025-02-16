@@ -280,14 +280,38 @@ function flattenArr(arr) {
 
 console.log(flattenArr([1, [2, [3, 4, [5, 6]]]]));
 
-//Find the second largest word in an array
+//second largest element /word in an array
 
-function secondLarge(arr) {
-   arr.sort((a, b) => b - a);
-  return arr[1];
+function secLargeWord(arr) {
+  if (arr.length < 2) {
+    return 'array length must be two words or more';
+  }
+
+
+  let uniqueArr = [...new Set(arr)];
+  uniqueArr.sort((a, b) => b.length - a.length);
+
+  return uniqueArr[1]
 }
 
-console.log(secondLarge([1,2,3,4,5]));
+console.log(secLargeWord(['banana', 'mango', 'apple', 'jackfruit', 'kiwi']));
+
+//second largest number in an array
+
+function seLargeNum(arr) {
+  if (arr.length < 2) {
+    return 'number length must be two or more';
+  }
+
+  let uniqeArr = [...new Set(arr)];
+
+  uniqeArr.sort((a, b) => b-a)
+
+return uniqeArr[1]
+}
+
+console.log(seLargeNum([1, 2, 3, 4, 5, 6, 7]));
+
 
 //Find the intersection of two arrays.
 
