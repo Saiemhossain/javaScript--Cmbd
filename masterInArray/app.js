@@ -490,3 +490,68 @@ let person = ['anamika', 'aric', 'athina'];
 person[3] = 'abir';
 
 console.log(person);
+
+// fromAsync method
+
+const ret = Array.fromAsync({
+  0: Promise.resolve('Saim'),
+  1: Promise.resolve('Google'),
+  2: Promise.resolve('Mac Mini'),
+  length:3,
+}).then((value) => console.log(value))
+
+
+
+
+// with method --> it replace the number based on index
+
+const numbers = [1, 2, 3, 4, 5, 7];
+
+const newNum = numbers.with(5, 6);
+
+
+
+// Grouping with forEach (more appropiate way)
+
+console.log(newNum);
+
+const employees = [
+  { name: 'Bob', dept: 'Eng', salary: 6000 },
+  { name: 'Alex', dept: 'HR', salary: 4000 },
+  { name: 'Samina', dept: 'Sales', salary: 7000 },
+  { name: 'John', dept: 'Eng', salary: 5500 },
+  { name: 'Fahim', dept: 'Eng', salary: 4700 },
+];
+
+const groupOfDep = {};
+
+
+employees.forEach(employee => {
+  const dept = employee.dept; 
+  if (!groupOfDep[dept]) {
+    groupOfDep[dept] = []; 
+  }
+
+  groupOfDep[dept].push(employee); 
+});
+
+
+console.log(groupOfDep);
+
+ 
+//finding salary 
+
+employees.forEach((emp) => {
+  let Empsalary = emp.salary;
+  // console.log(Empsalary);
+  
+  if (Empsalary >= 5000) {
+    console.log(`${emp.name} more than 5k`);
+  } else {
+    console.log(`${emp.name} less than 5k`);
+  }
+ 
+  
+});
+
+console.log(groupOfDep);
