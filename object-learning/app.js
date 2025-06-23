@@ -308,3 +308,70 @@ const employee = {
 }
 
 console.log(employee.salary);
+
+
+function details(firstName, lastName) {
+  const greet = 'hi';
+  const tittle = "hello";
+  console.log(`${greet} ${tittle} ${firstName} ${lastName}`);
+}
+
+details('saim', 'Hossain');
+
+
+function details(firstName, lastName, {greet='hi'}= {}) {
+  console.log(`${greet}  ${firstName} ${lastName}`);
+}
+
+details('saim', 'hossain')
+
+
+//charter count of a string
+
+
+function countChar(str) {
+  const count = {};
+
+  for (let char of str) {
+    if (char === ' ') continue
+    
+    count[char] = (count[char] || 0) +1
+  }
+
+  console.log(count);
+}
+
+countChar('saim hossain' )
+
+
+
+// if arr1 value square in arr2 then true otherwise false
+
+function double(arr1, arr2) {
+  let sqr = arr1.map((x) => x * x);
+
+  return sqr.toString() === arr2.toString();
+}
+
+console.log(double([2,4,6], [4,16,36]));
+console.log(double([2,4,6], [4,1,36]));
+
+
+
+ //finding maxValue and minValue of an array also ingnore  string 
+
+let temp = [20, 30, 42, 48, 'hello', 11, 6];
+
+
+function minOrMax() {
+  let numbersOnly = temp.filter(item => typeof item  === 'number')
+  
+
+  let maxVal = Math.max(...numbersOnly);
+  let minVal = Math.min(...numbersOnly);
+
+  return {maxVal, minVal}
+
+}
+
+console.log(minOrMax());
