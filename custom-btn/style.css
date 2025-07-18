@@ -1,0 +1,19 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#inpfile{
+  display: none;
+}
+
+#btn{
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: green;
+  color: white;
+  font-weight: 600;
+}
