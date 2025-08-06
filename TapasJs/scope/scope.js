@@ -53,5 +53,38 @@ function first() {
   sceond();
 }
 
-first()
+first();
+
+let globalVar = 'I am a global variable';
+
+function outer() {
+  let outerVar = 'I am a outer variable';
+
+  function inner() {
+    let innerVar = 'I am a inner variable';
+    console.log(globalVar);
+    console.log(outerVar);
+    console.log(innerVar);
+  }
+
+  inner();
+}
+
+outer();
+
+console.log(outerVar); // Reference error
+
+// variable shadowing : Variable shadowing happens when a variable declared in a smaller (inner) scope has the same name as a variable in an outer scope. The inner variable hides or "shadows" the outer one inside its scope.
+
+
+let msg = 'I am doing great';
+
+function message() {
+  let msg = 'I am not doing great';
+  console.log(msg); //'I am not doing great'
+}
+
+message();
+
+console.log(msg); //'I am doing great'
 
